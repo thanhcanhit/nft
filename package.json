@@ -1,0 +1,17 @@
+{
+  "name": "nft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwindcss": "npx tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/output.css --watch",
+    "minify": "css-minify -f ./src/assets/css/output.css --output ./src/assets/css/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thanhcanh",
+  "license": "ISC",
+  "devDependencies": {
+    "css-minify": "^2.0.0",
+    "tailwindcss": "^3.2.4"
+  }
+}

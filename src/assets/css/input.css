@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Chillax';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Chillax Semibold'), url('../font/Chillax/Chillax-Semibold.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Mazzard H';
+    src: url('../font/Mazzard/MazzardH-Regular.woff2') format('woff2'),
+      url('../font/Mazzard/MazzardH-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Mazzard H';
+    src: url('../font/Mazzard/MazzardH-SemiBold.woff2') format('woff2'),
+      url('../font/Mazzard/MazzardH-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Mazzard H';
+    src: url('../font/Mazzard/MazzardH-ExtraBold.woff2') format('woff2'),
+      url('../font/Mazzard/MazzardH-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Mazzard H';
+    src: url('../font/Mazzard/MazzardH-Medium.woff2') format('woff2'),
+      url('../font/Mazzard/MazzardH-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Mazzard H';
+    src: url('../font/Mazzard/MazzardH-Bold.woff2') format('woff2'),
+      url('../font/Mazzard/MazzardH-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  img {
+    user-select: none;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-3 h-3;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary bg-opacity-90;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-opacity-100
+  }
+}
+
+@layer utilities {
+
+  .text-shadow {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .transition-default {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  .card-shadow {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 38.1633px 98.8775px -17.3469px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(93.2398px); 
+  }
+
+  .left-bar {
+    @apply relative ml-4 pl-4 after:absolute after:-left-4 after:top-[50%] after:translate-y-[-50%] after:block after:w-3 after:h-[135px] after:rounded-md after:bg-[#61A0FF];
+  }
+
+  .hover-up {
+    @apply transition-transform duration-200 hover:transform hover:-translate-y-[2px];
+  }
+
+  .transform-x-center {
+    @apply left-[50%] translate-x-[-50%];
+  }
+
+  .transform-y-center {
+    @apply top-[50%] translate-y-[-50%];
+  }
+
+  .text-hover {
+    @apply transition-default hover:text-primary;
+  }
+
+  .show-on-pc {
+    @apply hidden lg:block;
+  }
+}
+
+@layer components {
+  .wrapper {
+    width: min(1440px, 100% - 8px);
+    @apply mx-auto;
+  }
+
+  .heading {
+    @apply font-chillax-semi text-30 md:text-[50px] lg:text-70 leading-120 tracking-tight;
+  }
+
+  .sub-heading {
+    @apply font-chillax-semi text-18 md:text-[24px] lg:text-30 leading-120 tracking-tight;
+  }
+
+  .mini-heading {
+    @apply font-semibold text-14 leading-140;
+  }
+
+  .paragraph {
+    @apply text-14 md:text-16 lg:text-18 leading-160;
+  }
+
+  .button {
+    @apply px-4 py-2 md:px-5 md:py-2 rounded-[6px] bg-primary text-white text-14 md:text-16 font-medium hover-up hover:opacity-95 ;
+  }
+
+  .button--outline {
+    @apply bg-white text-primary border border-primary;
+  }
+
+  .nav-item {
+    @apply font-ubuntu-bold text-18 leading-140 hover:text-primary transition-default;
+  }
+
+  .user-card {
+    @apply hidden lg:inline-flex gap-4 px-[28px] py-[18px] rounded-3xl card-shadow hover-up;
+  }
+
+  .step-card {
+    @apply flex flex-col max-w-[324px] h-400 pl-11 pr-3 py-8 rounded-3xl bg-white shadow-md transition-default hover:shadow-xl hover:transform hover:-translate-y-2;
+  }
+
+  .price-card {
+    @apply inline-block md:w-[520px] p-5 md:py-[45px] md:pl-[50px] md:pr-[50px] rounded-[22px] shadow-md;
+  }
+
+  .price-quantity {
+    @apply font-chillax-semi text-25 md:text-45 leading-120 tracking-tight mb-4;
+  }
+
+  .section-tag {
+    @apply inline-flex justify-center items-center py-4 px-14 rounded-lg text-14 font-semibold leading-140;
+  }
+
+  .feature-block {
+    @apply flex even:flex-row-reverse items-center gap-5 my-4;
+  }
+
+  .feature-card {
+    @apply lg:absolute text-15 md:text-18 z-20 px-5 py-4 shadow-sm rounded-3xl inline-block bg-white w-[290px] font-medium hover:shadow-md transition-default;
+  }
+
+  .marketplace-block {
+    @apply inline-block p-16 rounded-3xl;
+  }
+
+  .footer-col {
+    @apply flex flex-col gap-6;
+  }
+
+  .ball {
+    @apply hidden lg:block absolute rounded-full z-10 ;
+  }
+}

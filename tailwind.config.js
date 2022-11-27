@@ -1,0 +1,140 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: ["./src/**/*.{html,js}"],
+	theme: {
+		extend: {
+			colors: {
+				primary: "#5552FF",
+				"black-text": "#162639",
+				orange: "#FF7051",
+				"light-blue": "#61A0FF",
+				"strong-blue": "#4A3AFF",
+				"pastel-blue": "#E7EEFA",
+				"pastel-yellow": "#FFF2E2",
+				"pastel-green": "#E6F5D0",
+				"pastel-purple": "#EFE4FC",
+			},
+			fontSize: {
+				14: "14px",
+				15: "15px",
+				16: "16px",
+				18: "18px",
+				20: "20px",
+				25: "25px",
+				30: "30px",
+				45: "45px",
+				70: "70px",
+			},
+			margin: {
+				100: "100px",
+				140: "140px",
+				150: "150px",
+				200: "200px",
+				300: "300px",
+			},
+			padding: {
+				50: "50px",
+				180: "180px",
+			},
+			spacing: {
+				"1p": "1%",
+				"2p": "2%",
+				"3p": "3%",
+				"4p": "4%",
+				"5p": "5%",
+				"6p": "6%",
+				"7p": "7%",
+				"8p": "8%",
+				"9p": "9%",
+				"10p": "10%",
+				"11p": "11%",
+				"12p": "12%",
+				"13p": "13%",
+				"14p": "14%",
+				"15p": "15%",
+				"16p": "16%",
+				"17p": "17%",
+				"18p": "18%",
+				"19p": "19%",
+				"20p": "20%",
+				"25p": "25%",
+				"30p": "30%",
+				"35p": "35%",
+				"37p": "37%",
+				"40p": "40%",
+				"45p": "45%",
+				"50p": "50%",
+				"55p": "55%",
+				"60p": "60%",
+				"65p": "65%",
+				"70p": "70%",
+				"75p": "75%",
+				"80p": "80%",
+				"85p": "85%",
+				"90p": "90%",
+				"95p": "95%",
+				300 : "300px",
+				
+			},
+			fontFamily: {
+				"chillax-semi": ["Chillax", "sans-serif"],
+				mazzard: ["Mazzard H"],
+				"ubuntu-bold": ["Ubuntu", "sans-serif"],
+			},
+			lineHeight: {
+				120: "120%",
+				140: "140%",
+				160: "160%",
+				180: "180%",
+			},
+			animation: {
+				zoom: "zoom 5s linear infinite",
+				"zoom-2": "zoom-2 3s ease-in-out infinite alternate",
+				"zoom-center": "zoom-center 4s ease infinite",
+			},
+			keyframes: {
+				zoom: {
+					"0%": {
+						transform: "scale(0.3)",
+						opacity: 1,
+					},
+					"100%": {
+						transform: "scale(.9)",
+						opacity: 0.5,
+					},
+				},
+				"zoom-2": {
+					"0%": {
+						transform: "scale(.8) rotate(0)",
+					},
+					"100%": {
+						transform: "scale(1) rotate(360deg)",
+					},
+				},
+				"zoom-center": {
+					"0%": {
+						transform: "translateX(-50%) scale(0.4)",
+						opacity: 1,
+					},
+					"100%": {
+						transform: "translateX(-50%) scale(.9)",
+						opacity: 0.8,
+					},
+				},
+			},
+			width: {
+				250: "250px",
+				350: "350px",
+				720: "720px",
+				1000: "1000px",
+			},
+			height: {
+				banner: "128px",
+				1000: "1000px",
+				400: "400px",
+				800: "800px",
+			}
+		},
+	},
+	plugins: [],
+};
