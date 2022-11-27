@@ -152,7 +152,7 @@
   }
 
   .user-card {
-    @apply hidden lg:inline-flex gap-4 px-[28px] py-[18px] rounded-3xl card-shadow hover-up;
+    @apply hidden lg:inline-flex gap-4 px-[28px] py-[18px] rounded-3xl card-shadow hover-up z-10;
   }
 
   .step-card {
